@@ -1,0 +1,41 @@
+ <style>
+  .night-mode {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .night-mode a {
+    color: #fff;
+  }
+
+  .night-mode a:hover {
+    color: #ccc;
+  }
+
+  .night-mode img {
+    filter: invert(100%);
+  }
+
+  .night-mode input[type="text"], input[type="password"] {
+    background-color: #333;
+    border-color: #666;
+    color: #fff;
+  }
+
+  .night-mode button, input[type="submit"] {
+    background-color: #666;
+    border-color: #999;
+    color: #fff;  
+  }
+
+  .night-mode button:hover, input[type="submit"]:hover {background-color:#999;border-color:#ccc;}   </style> 
+<script> 
+  function toggleNightMode() { 
+    var body = document.body; 
+    if (body.classList.contains('night-mode')) { 
+        body.classList.remove('night-mode'); localStorage.setItem('isNightMode', 'false'); 
+    } else { body.classList.add('night-mode'); localStorage.setItem('isNightMode', 'true'); } } 
+    window.onload = function() { var isNightMode = localStorage.getItem('isNightMode'); 
+    if (isNightMode === 'true') toggleNightMode(); }; 
+</script> 
+<button onclick="toggleNightMode()"> <img src="https://example.com/icon_moon_white_24px.png" alt="Toggle night mode" /> </button>
