@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
 
   //fetch data from server i.e bots response
 
-  const response = await fetch("http://localhost:5000", {
+  const response = await fetch("https://jarvisai-287v.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -102,7 +102,6 @@ const handleSubmit = async (e) => {
     alert(err);
   }
 };
-
 
 form.addEventListener("submit", handleSubmit);
 form.addEventListener("keyup", (e) => {
