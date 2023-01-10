@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
 
   //fetch data from server i.e bots response
 
-  const response = await fetch("https://jarvisai-287v.onrender.com", {
+  const response = await fetch("https://jarvisai-287v.onrender.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
